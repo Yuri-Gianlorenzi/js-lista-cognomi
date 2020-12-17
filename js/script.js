@@ -8,7 +8,6 @@
 // creiamo l'array con dei valori al suo interno, sono state inserite apposta maiuscole e minuscole
 var surnames = ['Gianlorenzi', 'biffi', 'Corsini', 'cannone', 'gorleta', 'alesiano', 'giannaccari', 'Mammuccari', 'crudo', 'lusso', 'tavoni', 'donato', 'Gbadamosi', 'sartori', 'sebastiani', 'de marco', 'lai', 'greco', 'rossaro', 'Delfino', 'fontanot', 'ortu'];
 
-
 // qui chiediamo all'utente di inserire il proprio cognome tramite un prompt
 var userSurname = prompt('Inserisci il tuo cognome');
 console.log('cognome utente: ' + userSurname);
@@ -16,3 +15,14 @@ console.log('cognome utente: ' + userSurname);
 // qui inseriamo il cognome dell'utente all'interno dell'Array
 surnames.push(userSurname);
 console.log(surnames);
+
+
+// qui creiamo un ciclo che trasforma i cognomi presenti e quello inserito dall'utente in maniera che si riesca ad ordinarli in ordine alfabetico, altrimenti se la lettera iniziale differiscono (minuscolo e maiuscolo), non riesce ad ordinarli
+for (var i = 0; i < surnames.length; i++) {
+  surnames[i] = surnames[i].toLowerCase();
+}
+
+
+// con questo comando ordiniamo la lista di cognomi in ordine alfabetico
+surnames.sort();
+console.log('ordine alfabetico: ' + surnames);
